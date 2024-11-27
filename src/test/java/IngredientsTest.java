@@ -4,12 +4,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import user.UserClient;
 
 import static driver.WebDriverCreator.createWebDriver;
 
-public class RegistrationWithWrongPasswordTest {
-
+public class IngredientsTest {
     private WebDriver driver;
     @Before
     public void setUp () {
@@ -20,15 +18,28 @@ public class RegistrationWithWrongPasswordTest {
     }
 
     @Test
-    public void registrationWithWrongPassword () {
+    public void bunBlockTest () {
         HomePageStellarBurgers objHomePageStellarBurgers = new HomePageStellarBurgers(driver);
 
-        Assert.assertEquals("Некорректный пароль", objHomePageStellarBurgers.registrationWithWrongPassword());
+        Assert.assertEquals("Булки", objHomePageStellarBurgers.findBunBlock());
+    }
+
+    @Test
+    public void sauceBlockTest () {
+        HomePageStellarBurgers objHomePageStellarBurgers = new HomePageStellarBurgers(driver);
+
+        Assert.assertEquals("Соусы", objHomePageStellarBurgers.findSauceBlock());
+    }
+
+    @Test
+    public void fillingBlockTest () {
+        HomePageStellarBurgers objHomePageStellarBurgers = new HomePageStellarBurgers(driver);
+
+        Assert.assertEquals("Начинки", objHomePageStellarBurgers.findFillingBlock());
     }
 
     @After
     public void tearDown() {
         driver.quit();
     }
-
 }

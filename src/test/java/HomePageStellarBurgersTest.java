@@ -28,26 +28,7 @@ public class HomePageStellarBurgersTest {
 
     }
 
-    @Test
-    public void bunBlockTest () {
-        HomePageStellarBurgers objHomePageStellarBurgers = new HomePageStellarBurgers(driver);
 
-        Assert.assertEquals("Булки", objHomePageStellarBurgers.findBunBlock());
-    }
-
-    @Test
-    public void sauceBlockTest () {
-        HomePageStellarBurgers objHomePageStellarBurgers = new HomePageStellarBurgers(driver);
-
-        Assert.assertEquals("Соусы", objHomePageStellarBurgers.findSauceBlock());
-    }
-
-    @Test
-    public void fillingBlockTest () {
-        HomePageStellarBurgers objHomePageStellarBurgers = new HomePageStellarBurgers(driver);
-
-        Assert.assertEquals("Начинки", objHomePageStellarBurgers.findFillingBlock());
-    }
 
     @Test
     public void registrationProcessTest () {
