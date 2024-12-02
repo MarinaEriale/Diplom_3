@@ -1,0 +1,6 @@
+user\UserClient.class
+user\UserToken.class
+constants\UserEndpoints.class
+driver\WebDriverCreator.class
+user\User.class
+HomePageStellarBurgers.class
